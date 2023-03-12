@@ -1,0 +1,24 @@
+[
+  {
+  "context": ["/books"],
+  "target": "http://localhost:3000",
+  "secure": true,
+  "changeOrigin":true,
+  "logLevel":"debug"
+  },
+  {
+    "context": ["/upload"],
+    "target": "http://localhost:3000",
+    "secure": true,
+    "changeOrigin":true,
+    "logLevel":"debug"
+  },
+  {
+    "context": ["image"],
+    "target": "http://localhost:3000",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+]
+

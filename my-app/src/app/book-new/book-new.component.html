@@ -1,0 +1,81 @@
+<h1>Thêm sách</h1>
+<p>{{errMessage}}</p>
+<table>
+  <tr>
+    <td>Mã sách:</td>
+    <td>
+      <input type="text" class="form-control"  name="BookId" id="BookId" placeholder="Nhập Book Id" [(ngModel)]="book.BookId"/>
+    </td>
+  <tr>
+    <td>Tên sách:</td>
+    <td>
+      <input type="text" class="form-control"  name="BookName" id="BookName" placeholder="Nhập Book Name" [(ngModel)]="book.BookName"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Giá bán:</td>
+    <td> <input type="text" class="form-control"  name="Price" id="Price"[(ngModel)]="book.Price"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mô tả:</td>
+    <td>
+      <input type="text" class="form-control"  name="Describe" id="Describe" placeholder="Nhập Mô tả" [(ngModel)]="book.Describe"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Ảnh bìa</td>
+    <td>
+      <input type="file" (change)="onFileSelected($event)" [(ngModel)]="book.Image">
+      <img src="http://localhost:3000/image/{{book.Image}}" width="50px" height="50px">
+      <!-- <input type="text" class="form-control"  name="Image" id="Image" placeholder="Nhập Price" [(ngModel)]="book.Image"/> -->
+    </td>
+  </tr>
+  <tr>
+    <td>Số lượng tồn:</td>
+    <td>
+      <input type="text" class="form-control"  name="Amount" id="Amount" placeholder="Nhập số lượng tồn kho" [(ngModel)]="book.Amount"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mã CD:</td>
+    <td>
+      <input type="text" class="form-control"  name="MaCD" id="BookMaCDPrice" placeholder="Nhập mã CD" [(ngModel)]="book.MaCD"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mã NXB:</td>
+    <td>
+      <input type="text" class="form-control"  name="MaNXB" id="MaNXB" placeholder="Nhập Mã NXB" [(ngModel)]="book.MaNXB"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button (click)="postBook()">Submit</button>
+    </td>
+  </tr>
+</table>
+<!-- <table border="1">
+  <tr>
+    <td>Tensach</td>
+    <td>Giaban</td>
+    <td>Mota</td>
+    <td>Anhbia</td>
+    <td>Ngaycapphat</td>
+    <td>Soluongton</td>
+    <td>MaCD</td>
+    <td>MaNXB</td>
+  </tr>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.BookName}}</td>
+      <td>{{book.Price}}</td>
+      <td>{{book.Describe}}</td>
+      <td> <img src="assets/book_images/{{book.Image}}" width="50px" height="50px"> </td>
+      <td>{{book.Date}} </td>
+      <td>{{book.Amount}} </td>
+      <td>{{book.MaCD}} </td>
+      <td>{{book.MaNXB}} </td>
+    </tr>
+  </tbody>
+</table> -->

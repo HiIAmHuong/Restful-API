@@ -1,0 +1,35 @@
+<h1>Quản lý thông tin sách</h1>
+{{errMessage}}
+<button routerLink="book-new">
+  Create New
+</button>
+<table border="1" [cellPadding]="1">
+  <tr style="border-top: 1px solid black; border-bottom: 1px solid black;">
+    <td>Tensach</td>
+    <td>Giaban</td>
+    <td>Mota</td>
+    <td>Anhbia</td>
+    <td>Ngaycapphat</td>
+    <td>Soluongton</td>
+    <td>MaCD</td>
+    <td>MaNXB</td>
+    <td></td>
+  </tr>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.BookName}}</td>
+      <td>{{book.Price}}</td>
+      <td>{{book.Describe}}</td>
+      <td> <img src="http://localhost:3000/image/{{book.Image}}" width="50px" height="50px"> </td>
+      <td>{{book.Date}} </td>
+      <td>{{book.Amount}} </td>
+      <td>{{book.MaCD}} </td>
+      <td>{{book.MaNXB}} </td>
+      <td>
+        <button (click)="edit(book.BookId)">Edit</button>|
+        <button (click)="viewDetails(book.BookId)">Details</button>|
+        <button (click)="delete(book.BookId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

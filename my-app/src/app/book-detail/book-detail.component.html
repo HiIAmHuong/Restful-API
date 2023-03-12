@@ -1,0 +1,51 @@
+<h1>{{book.BookName}} (chi tiết)</h1>
+<p>{{errMessage}}</p>
+<table>
+  <tr>
+    <td>Mã sách:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="BookId" id="BookId" placeholder="Nhập Book Id" [ngModel]="book.BookId" [(ngModel)]="book.BookId"/>
+    </td>
+  <tr>
+    <td>Tên sách:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="BookName" id="BookName" placeholder="Nhập Book Name" [ngModel]="book.BookName" [(ngModel)]="book.BookName"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Giá bán:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="Price" [ngModel]="book.Price" id="Price"[(ngModel)]="book.Price"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mô tả:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="Describe" id="Describe" placeholder="Nhập Mô tả" [ngModel]="book.Describe" [(ngModel)]="book.Describe"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Ảnh bìa</td>
+    <td>
+      <img src="http://localhost:3000/image/{{book.Image}}" width="50px" height="50px">
+    </td>
+  </tr>
+  <tr>
+    <td>Số lượng tồn:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="Amount" id="Amount" placeholder="Nhập số lượng tồn kho" [ngModel]="book.Amount" [(ngModel)]="book.Amount"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mã CD:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="MaCD" id="BookMaCDPrice" placeholder="Nhập mã CD" [ngModel]="book.MaCD" [(ngModel)]="book.MaCD"/>
+    </td>
+  </tr>
+  <tr>
+    <td>Mã NXB:</td>
+    <td>
+      <input disabled="" type="text" class="form-control"  name="MaNXB" id="MaNXB" placeholder="Nhập Mã NXB" [ngModel]="book.MaNXB" [(ngModel)]="book.MaNXB"/>
+    </td>
+  </tr>
+</table>
